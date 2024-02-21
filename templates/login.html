@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+
+  </script>
+  <style>
+    body {
+     
+      background-image: url(https://wallpapercave.com/wp/wp9295332.jpg);
+      background-size: cover;
+      
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="sticky-top" style="text-align: end; background-color:black; height:4rem;color:white;padding-right: 1rem;">
+    <div class="but" style="padding:1rem;display:inline-flex" >
+       
+          <div class="bar"><a
+            href="{% url 'password_reset' %}" class="nav-link" style="padding-right:1rem;">Change password<img src="https://th.bing.com/th/id/OIP.d0GsjmylMY1ycES3CGA4UAHaHa?w=170&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:22px;height:22px"></a></div>   
+               
+              <div class="bar"> <a href="{% url 'home' %}" class="nav-link"style="padding-right:1rem;">Home<img src="https://th.bing.com/th/id/OIP.Qq-ATlyLa9QPUFLNnpD3CwHaHu?w=192&h=201&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:17px;height:17px"></a></div>
+             
+</div>
+  <form method="post">
+    {% csrf_token %}
+    <section class="vh-30 gradient-custom">
+      <div class="container py-5 h-80" >
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-10 col-md-8 col-lg-6 col-xl-4">
+            <div class="card bg-black text-white" style="border-radius: 2rem; opacity:.88">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-4 mt-md-4 pb-5">
+                  <img src="https://th.bing.com/th/id/OIP.0BsEr4u4-epKqPDWZ2D9XgHaHa?w=164&h=180&c=7&r=0&o=5&pid=1.7"
+                    style="border-radius: 50%; width:30%;height:30%">
+
+                  <h2 class="fw-bold mb-1 text-uppercase" style="color: rgb(8, 141, 203);">Login</h2>
+                  <p class="text-yellow-50 mb-3" style="color: rgb(19, 168, 231);">Please enter your login and password!</p>
+
+                  <div class="form-outline form-white mb-1">
+                    <input type="text" id="typeuserX" class="form-control form-control-lg" placeholder="Username"
+                      style="background-color: black; color :rgb(35, 169, 214)" name="username" />
+                    <label class="form-label" for="typeEmailX" style="color: rgb(0, 166, 255);">username</label>
+                  </div>
+
+                  <div class="form-outline form-white mb-0">
+                    <input type="password" id="typePasswordX" class="form-control form-control-lg"
+                      placeholder="Password" style="background-color: black; color :rgb(13, 186, 225,);"
+                      name="pass1" />
+                    <label class="form-label" for="typePasswordX" style="color: rgb(21, 187, 228);">Password</label>
+                  </div>
+
+                  <p class="small mb-2 pb-lg-2"><a class="text-lightskyblue-50" href="{% url 'password_reset' %}">Forgot
+                      password?</a></p>
+
+                  <button class="btn btn-outline-primary btn-lg px-4" type="submit" style="color: rgb(13, 170, 222);">Login</button>
+
+                 
+
+                </div>
+
+
+                <div>
+                  <p class="mb-0" style="color: red;">Don't have an account? <a href="{% url 'signup' %}" class="text-primary-50 fw-bold">Sign
+                      Up</a>
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </form>
+  </section>
+ 
+</body>
+
+</html>

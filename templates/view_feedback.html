@@ -1,0 +1,58 @@
+{% extends 'feedback.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+    
+
+  </script>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+        }
+        header:hover{
+            color: skyblue;
+            
+            font-weight: 200;
+           
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: end;padding-right:2rem"><a href="{% url 'home' %}" class="nav-link"style="padding-right:1rem;">Home<img src="https://th.bing.com/th/id/OIP.Qq-ATlyLa9QPUFLNnpD3CwHaHu?w=192&h=201&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:17px;height:17px"></a></header>
+    
+    <div class="container py-5">
+        <div class="row text-center text-white">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-5">OUR FEEDBACKS</h1>
+                <p class="lead mb-0">Please find out what our users have to say about us!!.</p>
+                
+            </div>
+        </div>
+    </div>
+    <ul>
+        {% for feedback in feedback_list %}
+            <li class="feedback-item">
+                <p><strong><img src="data:image/jpeg;base64,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" alt="" style="height: 25px;width:25px"></strong> {{ feedback.name }}</p>
+                <p><strong></strong> {{ feedback.email }}</p>
+                <p><strong>Feedback:</strong> {{ feedback.message }}</p>
+                <!-- <p class="feedback-info">Submitted on {{ feedback.created_at }}</p> -->
+            </li>
+        {% empty %}
+            <li>No feedback available.</li>
+        {% endfor %}
+    </ul>
+    <button type="button" class="btn btn-light"><a href="{% url 'feedback' %}" class="nav-link">Submit Feedback</a></button> 
+</body>
+</html>
+
+{% endblock %}

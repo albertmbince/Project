@@ -1,0 +1,72 @@
+{% extends 'second.html' %}
+{% block content %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+           
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'types' type='Headlight' %}">Headlights</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'types' type='Taillamp' %}">Taillamps</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'types' type='Engineoil' %}">Engineoil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'types' type='Others' %}">Others</a>
+          </li>
+           
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#"><strong
+          style="color: white;">Vehicle</strong><strong style="color: rgb(233, 17, 17);"> <i> 4</i></strong>
+        <strong style="color: white;">SALE</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">logout</a>
+            </li>
+           
+        </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row" style="margin-top: 2rem;">
+        
+
+        
+        <div class="container">
+            <div class="row" style="margin-top: 2rem;">
+              
+             
+              {% for i in Ttype %}
+        
+                <div class="col-lg-3 col-md-3 col-sm-2 " >
+                  <div class="card my-3" style="width: 100%;">
+                      <img src="{{i.image.url}}" class="card-img-top w-100"  alt="..." style=" width: 200px;
+                      height: 200px;">
+                      <div class="card-body">
+                        
+                        <h5 class="display-6"  id="model" name="model">{{i.model}}</h5>
+                        <p class="lead mb-0"  id="color" name="price">Rs.{{i.price}}</p>
+                       
+                        
+                        <a href="{% url 'add_to_cart' spare_id=i.id %}" class="btn btn-outline-info">ADD TO CART</a>
+                        <a href="{% url 'checkout' %}" class="btn btn-outline-secondary">BUY NOW</a>
+                      </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+          </div>
+ 
+      
+
+  {% endblock %}

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page 1
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        body{
+            
+            background-image:url() ;
+            background-size: cover;
+
+            background-color: rgb(21, 20, 20);
+            color: white;
+            opacity: .9;
+           
+        }
+        .c:hover {
+            transform: scale(1.05);
+        }
+        .card{
+            background-color: black;
+            color: white;
+
+        }
+        .card:hover{
+            transform: scale(1.1);
+            color: rgb(18, 203, 239);
+            transform: translateY(1rem);
+            transition: 0.8s;
+        }
+        .sec{
+            
+            display: inline-flex;
+            padding-left: 6.5rem;
+
+        }
+        .sec:hover{
+            color: yellow;
+            transform: scale(1.05);
+            transition: 0.9s;
+        }
+        .bar:hover{
+            color: lightskyblue;
+            transform: scale(1.3);
+            padding-right: .5rem;
+            font-weight: 100;
+            padding-top: 0rem;
+        }
+        
+        @keyframes imageAnimation {
+            0% { transform: scale(1);
+             }
+            50% { transform: scale(1.05);
+            transform: translateY(10px); }
+            100% { transform: scale(1);
+             }
+          }
+          
+          
+          .image-animation {
+            animation-name: imageAnimation;
+            animation-duration: 2s; 
+            animation-iteration-count: infinite; 
+            animation-timing-function: ease-in-out; 
+          }
+          .image-animation:hover {
+            transform: rotate(360deg); 
+            
+          }
+           
+      
+    
+      
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="sticky-top" style="text-align: end; background-color:black; height:4rem;color:white;padding-right: 1rem;">
+        <div class="but" style="padding:1rem;display:inline-flex" >
+           
+              <div class="bar"><a
+                href="{% url 'password_reset' %}" class="nav-link" style="padding-right:1rem;">Change password<img src="https://th.bing.com/th/id/OIP.d0GsjmylMY1ycES3CGA4UAHaHa?w=170&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:22px;height:22px"></a></div>   
+                   
+                  <div class="bar"> <a href="{% url 'user_logout' %}" class="nav-link"style="padding-right:1rem;">logout<img src="https://th.bing.com/th/id/OIP.RedzD-txA5XjvihYWHmR1wHaHa?w=201&h=201&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:17px;height:17px"></a></div>
+                  <div class="bar"> <a href="{% url 'view_cart' %}" class="nav-link"style="padding-right:1rem;">Mycart<img src="https://th.bing.com/th/id/OIP.PmmZjMlEPB_H0s2T-nYR7QHaHa?w=200&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:29px;height:29px"></a></div>
+                  <div class="bar"> <a href="{% url 'wishlist' %}" class="nav-link"style="padding-right:1rem">wishlist <img src="https://th.bing.com/th/id/OIP.zpaD0HgCP0msJ9FYm57s1gHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:17px;height:17px"></a></div>
+                  <div class="bar"><a href="{% url 'feedback' %}" class="nav-link">Feedback<img src="https://th.bing.com/th/id/OIP.YFFkoNHsG3EOW-EK-GGf4AHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border-radius: 50%;width:23px;height:23px"></a></div>
+                </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row text-center text-white">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4">Welcome User !!</h1>
+                <p class="lead mb-0">Explore Our products.</p>
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" style="text-align: center;">
+        <div class="row">
+            
+            <div class="col-9">
+                <div class="row">
+                    <h3 style="font-size: larger;font-weight:200"></h3>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="c"><a href="{% url 'list' %}" class="nav-link"><img src="https://wallpaperaccess.com/full/94341.jpg"
+                                style="width: 8cm;height:8cm; border-radius:20%" class="image-animation">
+                            <h3 class="display-4">Vehicles</h3></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="c"><a href="{% url 'acessories' %}" class="nav-link"><img
+                                src="https://image.nengun.com/catalogue/350x280/nengun-3037-00-jun-hyper_piston_kit_-_r_series.png"
+                                style="width: 8cm;height:8cm;border-radius:20%;" class="image-animation">
+                            <h3 class="display-4">Acessories</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+    
+    </div>
+    
+    {% block content %}
+   
+     
+        <div class="container" >
+            <div class="container py-5">
+                <div class="row text-center text-white">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-4">Vehicle By Places</h1>
+                        <p class="lead mb-0">Hey search your choices by place.</p>
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sec"><a href="{% url 'places' place='Ernakulam'  %}"  class="nav-link"><img src="https://th.bing.com/th?id=OIP.uWFWb4a9CO73Gae3OVG9vwHaE9&w=305&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="" title="Ernakulam" name="Ernakulam"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Ernakulam</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Trivandrum' %}"  class="nav-link"><img src="https://th.bing.com/th?id=OIP.9wD2MfBRjodIcqdKXIBHoQHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="" title="Trivandrum"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0" >Trivandrum</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Alappuzha' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.FASn_zbaXM8xufz-DqKm9AHaFj?w=230&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Alappuzha"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0" >Alappuzha</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Thrissur' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.s_3NHyh2v4xcSaJa-niK2QHaEw?w=228&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Thrissur"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Thrissur</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Malappuram' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.KnXKbT25Xxg9BKpOfyXbuAHaFj?w=248&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Malappuram"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Malappuram</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Idukki' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.E3m2ohQI8fCxYF3qv9R_DQHaE6?w=264&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Idukki"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Idukki</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Kozhikode' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.MuNHn18xeVC7SreGahzYgwHaFj?w=267&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Kozhikode"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Kozhikkode</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Kasargod' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.xtzCHGyUEf3dYy2Pt0GV8AHaEK?w=264&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Kasargod"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0" >Kasargod</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Kottayam' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.j3TbESkDY0ka2dUjc9lgOAHaE_?w=199&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Kottayam"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Kottayam</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Pathanamthitta' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.spDLfP66EOW0COMCgRf1bQHaDs?w=296&h=174&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Pathanamthitta"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">pathanamthitta</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Wayanad'  %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.u7kivPbwpV40D1g-qHcgpgHaEK?w=268&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Wayanad"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0" >Wayanad</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Kollam' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.Wip8csAQBmjr0yFpBRZT5wHaD4?w=272&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Kollam"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Kollam</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Kannur' %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.QocFJZSrUZaNmcHyA_kHhQHaFj?w=187&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Kannur"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">Kannur</h5></a></div>
+            <div class="sec"><a href="{% url 'places' place='Palakkad'  %}"  class="nav-link"><img src="https://th.bing.com/th/id/OIP.GJpYxyzYEr9rAGpyzl9_eQHaE3?w=239&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" title="Palakkad"  style="width: 4cm;height:4cm; border-radius:20%" ><h5 class="lead mb-0">palakkad</h5></a></div>
+        
+            
+            
+            
+        </div>
+       
+       
+        
+
+    {% endblock %}
+    <script>
+        var contactbtn = document.getElementById('contactbtn');
+
+        contactbtn.addEventListener('click', function() {
+        
+            alert("Since  avehicle can't be purchased by looking the picture,Please fill the form so that we will reach u out soon for further details");
+            
+            
+        });
+    </script>
+</body>
+</html>

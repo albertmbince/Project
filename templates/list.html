@@ -1,0 +1,43 @@
+
+    
+{% extends 'second.html' %}
+{% block content %}
+<div class="container">
+    <div class="row" style="margin-top: 2rem;">
+      
+     
+      {% for i in result %}
+
+        <div class="col-lg-3 col-md-3 col-sm-2 " >
+          <div class="card my-3" style="width: 100%;">
+              <img src="{{i.image.url}}" class="card-img-top w-100"  alt="..." style=" width: 200px;
+              height: 200px;">
+              <div class="card-body">
+                <h5 class="display-6"  id="brand" name="brand">{{i.brand}}</h5>
+                <h5 class="display-6"  id="model" name="model">{{i.model}}</h5>
+                <p class="lead mb-0"  id="color" name="color">color:{{i.color}}</p>
+                <p class="lead mb-0"  id="year" name="year">model:{{i.year}}</p>
+               
+                <p class="card-text"  id="price" name="price">Rs.{{i.price}}</p>
+
+                <a href="{% url 'add_to_wishlist' vehicle_id=i.id %}" class="btn btn-outline-info">ADD TO WISHLIST</a>
+                <a href="{% url 'contact' %}"><button type="button" class="btn btn-outline-secondary" id="contactbtn">CONTACT</button></a>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+  <script>
+    var contactbtn = document.getElementById('contactbtn');
+
+        contactbtn.addEventListener('click', function() {
+        
+            alert("Since  a vehicle can't be purchased by looking the picture,Please fill the form so that we will reach u out soon for further details");
+            
+            
+        });
+  </script>
+  {% endblock %}
+
+

@@ -1,0 +1,47 @@
+
+
+
+  
+body,html{
+  background-color: black;
+  scrollbar-3dlight-color: aqua;
+  
+  
+  
+}
+.head{
+  text-align: start;
+  color: white;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center-bar{
+  position:absolute;
+  background-color: rgb(8, 9, 10);
+  width:80%;
+  height: 50%;
+  left: 5cm;
+  right: 5cm;
+  top: 5cm;
+  bottom: 5cm;
+  opacity: .3;
+  
+  background-size: contain;
+}
+.c2{
+  position: relative;
+  top: 8cm;
+  left: 8cm;
+  color: white;
+  width: 10cm;
+  height: 10cm;
+}
+.imagecoro{
+  position: absolute;
+  width: 8cm;
+  height: 4cm;
+  padding-left: 5rem;
+  padding-top: 9rem;
+}
+
